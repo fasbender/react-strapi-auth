@@ -49,6 +49,7 @@ const Register = ({ updateUser }) => {
             })
 
             if(updateUser && typeof updateUser === 'function'){
+                localStorage.setItem('user', JSON.stringify(userCreation.data))
                 updateUser(userCreation.data)
             }
         } catch (error) {
